@@ -1,5 +1,6 @@
 package com.suraj;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 //66. Plus One
@@ -7,32 +8,36 @@ import java.util.Arrays;
 public class PlusOne {
     public static void main(String[] args) {
         int[] arr = {9};
+//        plusOne(arr);
         System.out.println(Arrays.toString(plusOne(arr)));
     }
 
-    static int[] plusOne(int [] arr){
-        double sum = 0;
-        double j = arr.length-1;
-        for (int i = 0; i <arr.length ; i++) {
-            double value = Math.pow(10,j);
-            sum += value*arr[i];
-
-            System.out.println(sum);
-//            System.out.println(i);
-//            System.out.println(j);
-            j--;
+    static int[] plusOne(int[] digits){
+        for (int i = digits.length-1; i >=0 ; i--) {
+            if(digits[i] < 9){
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
         }
-        sum += 1;
-//        System.out.println(sum);
-        int length = String.valueOf(sum).length();
-        for (int i = length-1; i >=0; i--) {
-            double digit = sum%10;
-            arr[i] = (int) digit;
-            sum = sum/10;
-//            System.out.println(digit);
-        }
-        System.out.println(Arrays.toString(arr));
-        return arr;
+        int[] digits2 = new int[digits.length+1];
+        digits2[0] = 1;
+        return digits2;
     }
-
 }
+
+
+/*
+int len=digits.length;
+       for(int i=len-1;i>=0;i--){
+           if(digits[i]<9){
+               digits[i]++;
+               return digits;
+           }
+           digits[i]=0;
+       }
+        int[] newArr=new int[len+1];
+        newArr[0]=1;
+        return newArr;
+    }
+ */
