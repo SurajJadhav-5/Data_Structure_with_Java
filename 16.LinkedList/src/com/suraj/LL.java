@@ -32,9 +32,9 @@ public class LL {
         head = node;
 
         // only one element then tail = head
-        if(tail == null){
-            tail = head;
-        }
+            if(tail == null){
+                tail = head;
+            }
         size++;
     }
 
