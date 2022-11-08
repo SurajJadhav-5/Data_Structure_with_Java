@@ -59,7 +59,8 @@ public class Main {
 //
 //        dll.insertAfterNode(64, 24);
 //        dll.display();
-//        dll.displayReverse();
+//        dll.displayReverse
+//        ();
 
 
 //        *************************************************
