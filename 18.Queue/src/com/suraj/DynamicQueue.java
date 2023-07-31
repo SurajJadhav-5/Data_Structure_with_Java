@@ -20,7 +20,7 @@ public class DynamicQueue extends CircularQueue{
             }
             front = 0;
             end = data.length;
-            data = temp; 
+            data = temp;
         }
         return super.insert(value);
     }

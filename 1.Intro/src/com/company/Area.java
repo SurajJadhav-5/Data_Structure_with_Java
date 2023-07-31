@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Area{
-    private static Scanner in = new Scanner(System.in);
+    private static Scanner in = new Scanner(Syst    em.in);
 
     public static void main(String[] args) {
 //        System.out.println(new Integer(56) +""+ new ArrayList<>() );
